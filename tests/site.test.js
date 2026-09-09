@@ -10,6 +10,14 @@ assert(fs.existsSync('src/style.css'), "❌ Error: src/style.css is missing!");
 const html = fs.readFileSync('src/index.html', 'utf8');
 
 // 2. Check required course tabs exist in HTML
+const requiredTabs = [
+  'PES University',
+  'About me',
+  'CI/CD Pipeline',
+  'Instructable',
+  'More about me'
+];
+
 requiredTabs.forEach(tabName => {
   const tabRegex = new RegExp(
     `<button[^>]*class=["'][^"']*tab-btn[^"']*["'][^>]*>\\s*${tabName}\\s*</button>`,
