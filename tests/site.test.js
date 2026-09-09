@@ -2,6 +2,12 @@ const fs = require('fs');
 const assert = require('assert');
 
 console.log("🔍 Running CI test suite...");
+const requiredTabs = [
+  "Home",
+  "Course 1",
+  "Course 2",
+  "Course 3"
+];
 
 // 1. Verify critical files exist
 assert(fs.existsSync('src/index.html'), "❌ Error: src/index.html is missing!");
